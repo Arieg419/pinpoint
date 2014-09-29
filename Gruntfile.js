@@ -311,15 +311,15 @@ module.exports = function (grunt) {
       options: {
         // This should be the name of your apps angular module
         module: 'pinPointApp',
-        htmlmin: {
-          collapseBooleanAttributes: false,
-          collapseWhitespace: false,
-          removeAttributeQuotes: false,
-          removeEmptyAttributes: false,
-          removeRedundantAttributes: false,
-          removeScriptTypeAttributes: false,
-          removeStyleLinkTypeAttributes: false
-        },
+        // htmlmin: {
+        //   collapseBooleanAttributes: false,
+        //   collapseWhitespace: false,
+        //   removeAttributeQuotes: false,
+        //   removeEmptyAttributes: false,
+        //   removeRedundantAttributes: false,
+        //   removeScriptTypeAttributes: false,
+        //   removeStyleLinkTypeAttributes: false
+        // },
         usemin: 'app/app.js'
       },
       main: {
