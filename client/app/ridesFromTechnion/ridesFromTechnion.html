@@ -1,0 +1,84 @@
+
+<div ng-include="'components/navbar/navbar.html'"></div><br>
+
+<div class="omertainer row">
+  <div class="map">
+    <!-- <div id="map_canvas"> -->
+ <google-map center="map.center" zoom="map.zoom" draggable="true" options="options"  bounds="map.bounds" editable="true">
+   <marker ng-repeat="marker in finishMarkTechArr" coords="marker.coords" idkey="marker.id" >
+        </marker>
+  </google-map>
+<!-- </div> -->
+  </div>
+  <div class="sidebar col-md-8">
+    <br><br>
+    <div class="">
+    <!-- <div class="col-md-6 col-md-offset-3"> -->
+<!-- <div class="col-lg-10 col-md-10 col-lg-offset-2 col-md-offset-2 sm-md-12"> -->
+      <div class="page-header">
+        <span id="rideBoardTitle">RideBoard from the Technion</span>
+         <span class="dropdown" on-toggle="toggled(open)">
+         <a href class="dropdown-toggle">
+        What rides do you want to see?
+         </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="/ridesFromTechnion">Rides from the Technion</a>
+        <a href="/RideBoard">Rides to the Technion</a>
+        </li>
+      </ul>
+    </span>
+        <div class='filter'>
+        <input type="text"  ng-autocomplete ng-model="searchText" options="options" details="details"/>
+        </div>
+      </div>
+
+
+       <ul>
+          <li  ng-repeat="post in rides | orderBy: -'created_time' | filter:searchText" class="panel">
+
+              <span class="panel-image"><img src="https://graph.facebook.com/{{post.user.facebook.id || post.userId}}/picture" alt="FB pic"></span>
+              <div class="contact-info">
+                <span class='panel-name'>  Name : {{post.from.name || post.name}}</span>
+                <span class='panel-time'> <i class="glyphicon glyphicon-time"></i> Time Of Creation : {{post.created_time}}</span>
+                <span class='panel-profile-link'> <i class="glyphicon glyphicon-user"></i> Profile Link : <a ng-href="{{'http://' + post.profileLink}}">Check</a></span>
+
+              </div>
+
+                <span class='panel-message'> <i class="glyphicon glyphicon-envelope"></i> Message : {{post.message}}</span>
+
+                <span class="starting-dest">Starting Destination : {{post.startingDestination}}</span>
+              <span class="final-dest">Final Destination : {{post.finalDestination}}</span>
+              <span class="time-of-dept">Time of Departure : 18:00 {{post.timeOfDeparture}}</span>
+      
+              
+              <button ng-show='userCheck(post)' ng-click="delete(post)"> Delete </button>
+              <facebook-like></facebook-like>
+          </li>
+        </ul>
+
+    
+     <!--  <div class="panel" ng-repeat="post in posts | orderBy:'-upvotes'">
+        <span class="glyphicon glyphicon-thumbs-up"
+          ng-click="incrementUpvotes(post)"></span> --> <!-- //click upvote is messed up -->
+        <!-- {{post.upvotes}}
+ -->     <!--    <span style="font-size:20px; margin-left:10px;">
+          <a ng-show="post.link" href="{{post.link}}">
+            {{post.name}}
+          </a>
+          <span ng-hide="post.link">
+            {{$index+1}}
+            {{post.name}}<br>
+            Starting Destination: {{post.startingDestination}} <br>
+            Final Destination : {{post.finalDestination}}
+          </span>
+        </span>
+      </div> -->
+
+
+
+    </div>
+  </div> 
+  </div>
+</div>
+

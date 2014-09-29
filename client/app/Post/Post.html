@@ -1,0 +1,161 @@
+
+<div ng-include="'components/navbar/navbar.html'"></div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <div class="page-header">
+        <h3 id="title">List a Ride</h3>
+      </div>
+
+     <!--  <div ng-repeat="post in posts | orderBy:'-upvotes'">
+        <span class="glyphicon glyphicon-thumbs-up"
+          ng-click="incrementUpvotes(post)"></span>
+        {{post.upvotes}}
+        <span style="font-size:20px; margin-left:10px;">
+          <a ng-show="post.link" href="{{post.link}}">
+            {{post.name}}
+          </a>
+          <span ng-hide="post.link">
+            {{post.name}}
+          </span>
+        </span>
+      </div> -->
+
+      <form ng-submit="addPost()"
+        style="margin-top:30px;">
+        <h3 class="post-title">Add a new post</h3>
+
+      <select class="dropdown dropdown-title" ng-model="boardChoice">
+        <option ng-repeat="choice in items">{{choice}}</option>
+      </select>
+      <!-- <ul class="dropdown-menu">
+        <li ng-repeat="choice in items">
+          <a href>{{choice}}</a>
+        </li>
+      </ul> -->
+      
+           <!-- <span class="dropdown dropdown-title" on-toggle="toggled(open)">
+        Where will you be posting to?
+    </span> -->
+
+        <div class="form-group">
+          <input type="text"
+            class="form-control"
+            placeholder="Name"
+            ng-model="name"></input>
+        </div>
+        <div>
+             <input type="text" class="form-control"  ng-autocomplete ng-model="startingDestination" options="options" details="details" placeholder="Starting Location"/>
+        </div>
+
+        <div>
+             <input type="text" class="form-control" ng-autocomplete ng-model="finalDestination" options="options" details="details" placeholder="Final Destination"/>
+        </div>
+
+           <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="$Price$"
+          ng-model="price"></input>
+        </div>
+
+         <div class="form-group">
+          <textarea type="text"
+          class="form-control"
+          placeholder="Message"
+          ng-model="message"></textarea>
+        </div> 
+
+
+        <div class="form-group">
+          <input type="text"
+          class="form-control"
+          placeholder="Link"
+          ng-model="link"></input>
+        </div>
+
+
+
+        <div class="btn-group" dropdown is-open="status.isopen">
+      <button type="button" class="btn btn-primary dropdown-toggle btn-post" ng-disabled="disabled">
+        Accomodate <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">1 Person</a></li>
+        <li><a href="#">2 People</a></li>
+        <li><a href="#">3 People</a></li>
+        <li><a href="#">4 People</a></li>
+        <li class="divider"></li>
+      </ul>
+    </div>
+
+     <div class="btn-group" dropdown is-open="status.isopen">
+      <button type="button" class="btn btn-primary dropdown-toggle btn-post" ng-disabled="disabled">
+        Pets <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Humans are enough.</a></li>
+        <li><a href="#">Yes!</a></li>
+        <li class="divider"></li>
+      </ul>
+    </div>
+
+    <!-- ====================== Specifying Times ========== -->
+
+    <quick-datepicker ng-model='myDate'></quick-datepicker>
+
+
+      <!-- <h4>Date of Ride</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+    </div> -->
+
+    <!-- !!!!!!!!!!!!!!!!TIME PICKER!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+    <!-- <timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+
+    <button class="btn btn-info" ng-click="toggleMode()">12H / 24H</button> -->
+
+    <!-- ============== POST ================== -->
+
+        <button type="submit" class="btn btn-primary post btn-post">Post</button>
+      </form>
+
+      <hr>
+
+     <!--  <form ng-submit="addComment()"
+    style="margin-top:30px;">
+    <h3>Add a new comment</h3>
+
+    <div class="form-group">
+      <input type="text"
+      class="form-control"
+      placeholder="Comment"
+      ng-model="body"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form> -->
+  <!-- control="map.control" -->
+ <!--  <google-map center="map.center" zoom="map.zoom" draggable="true" options="options"  bounds="map.bounds" editable="true">
+   <marker ng-repeat="marker in markerArr" coords="marker.coords" idkey="marker.id" >
+        </marker>
+    <rectangle bounds="bounds" fill="'#FFFFFF 0.5'"></rectangle>
+  </google-map> -->
+
+ <!--  <div id="map_canvas" >
+     <google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+        <circle ng-repeat="c in circles track by c.id" center="c.center" stroke="c.stroke" fill="c.fill" radius="c.radius"
+                visible="c.visible" geodesic="c.geodesic" editable="c.editable" draggable="c.draggable" clickable="c.clickable"></circle>
+    </google-map>
+</div> --> 
+
+    </div>
+  </div>
+

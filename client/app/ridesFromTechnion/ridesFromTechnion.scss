@@ -1,0 +1,85 @@
+html, html a {
+    -webkit-font-smoothing: antialiased !important;
+}
+
+html, body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.panel {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  background-color: white;
+  list-style-type: none;
+  padding: 20px;
+
+  border-bottom : 2px solid #ddd;
+
+  &:hover {
+  	background-color: #f8f8f8;
+  }
+
+  .final-dest {
+    margin-left: 30px;
+
+    color: green;
+    
+
+  }
+
+  .starting-dest {
+    color: green;
+  }
+
+  span.panel-image {
+	display: inline-block;
+  }
+
+  div.contact-info {
+  	display: inline-block;
+  	width: 85%;
+  	float: right;
+  }
+
+  span.panel-message {
+  	display: block;
+  	max-width: 85%;
+  	margin-top: 20px;
+  }
+
+  .panel-name {
+  	display: block;
+  }
+  .panel-time {
+  	display: block;
+  }
+  .panel-profile-link {
+  	display: block;
+  }
+
+  .time-of-dept {
+  	float: right;
+  }
+  .starting-dest {
+  	margin-right: 5px;
+  }
+
+}
+
+#filterTitle {
+	font-size: 18px;
+}
+
+#rideBoardTitle {
+	font-size: 24px;
+	margin-left: 54px;
+}
+
+.filter{
+	float: right;
+}
+
+.dropdown {
+	margin-right: 12px;
+}

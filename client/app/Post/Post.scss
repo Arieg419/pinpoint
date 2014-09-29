@@ -1,0 +1,82 @@
+.angular-google-map-container { height: 400px; }
+
+#title {
+	font-size: 20px;
+	display: inline-block;
+}
+
+a, a:visited, a:focus {
+	color: #444;
+}
+.dropdown {
+	float: right;
+}
+
+.form-group {
+	margin-bottom: 0;
+}
+
+input.form-control {
+	border-radius: 0px !important;
+	padding: 12px;
+	height: auto;
+	box-shadow: none;
+
+}
+
+textarea.form-control {
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  border-radius: 0px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #b3aca7;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+button {
+	margin-top: 10px;
+}
+button.post {
+	display: block;
+	margin-top: 10px;
+}
+
+.post-title {
+	display: inline-block;
+	margin: 0;
+	margin-bottom: 10px;
+}
+.dropdown-title {
+	display: inline-block;
+	float: right;
+	margin-bottom: 10px;
+	width: 220px;
+	font-size: 12px;
+	border: 3px solid #ddd;
+	color: #444;
+	padding: 10px;
+}
+ul.dropdown-menu {
+	min-width: 216px;
+	border-radius: 0px;
+	padding:0px;
+}
+
+.btn-post {
+	border-radius: 0px;
+	background: transparent;
+	border: 3px solid #ddd;
+	color: #444;
+}

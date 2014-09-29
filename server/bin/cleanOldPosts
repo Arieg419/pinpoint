@@ -1,0 +1,45 @@
+#! /usr/bin/env node
+
+var Post = require('../api/Post/Post.model')
+
+var moment = require('moment')
+
+moment().format();
+
+
+
+var dateB = moment('2014-11-11');
+var dateC = moment('2014-10-11');
+
+var dateA = moment().subtract(7,'days');
+// console.log(dateA.fromNow());
+
+// console.log('Difference is ', dateB.diff(dateC, 'days'), 'days');
+
+console.log(Post.find( function(err, posts) {console.log(posts)}))
+var allPosts;
+Post.find(function (err, posts) {
+	console.log('post find method getting called')
+	if(err) { return handleError(res, err); }
+	allPosts = posts;
+for(var i = 0; i < allPosts.length; i++){
+console.log(moment() - allPosts[i].created_time )
+}
+});
+
+
+Post.remove({
+
+      // for(var i = 0; i < currentPosts.length ; i++) {
+      //   if ((moment() - posts[i].created_time) > 1 ) {
+      //     ridePosts.delete(currentPosts[i]);
+      //   }
+      // }
+    
+
+	// created_time:{
+	// 	// $lte: moment(Date.now.subtract(1,'h').quarter())
+	// 	moment().subtract('days', 2).fromNow(); 
+	// }
+
+})
