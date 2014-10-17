@@ -13,8 +13,11 @@
 }
 
 .filter{
-	float: right;
-	margin-right: 64px;
+	margin-right: 40px;
+	margin-top: 40px;
+	clear: both;
+	display: block;
+
 }
 .angular-google-map {
 	height: 100%;
@@ -22,4 +25,23 @@
 
 .angular-google-map-container {
 	height: 100%;
+}
+
+.omertainer {
+	width: 100%;
+	height: 100%;
+
+
+	div.sidebar {
+		@media (max-width: 420px) {
+			width: 100% !important;
+		}
+	}
+}
+
+
+.map {
+	@media (max-width: 420px) {
+  	display: none;
+	}
 }

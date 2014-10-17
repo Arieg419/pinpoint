@@ -1,6 +1,6 @@
 
 <!-- <div class="col-md-12">
-This is the RideBoard! Post incoming and outcoming rides! 
+This is the RideBoard! Post incoming and outcoming rides!
 </div>
 
 <form ng-submit="addPost()">
@@ -26,7 +26,7 @@ This is the RideBoard! Post incoming and outcoming rides!
 
 <div ng-include="'components/navbar/navbar.html'"></div><br>
 
-<div class="omertainer row">
+<div class="omertainer">
   <div class="map">
     <!-- <div id="map_canvas"> -->
  <google-map center="map.center" zoom="map.zoom" draggable="true" options="options"  bounds="map.bounds" editable="true">
@@ -37,7 +37,7 @@ This is the RideBoard! Post incoming and outcoming rides!
   </div>
   <div class="sidebar col-md-8">
     <br><br>
-    <div class="">
+    <div>
     <!-- <div class="col-md-6 col-md-offset-3"> -->
 <!-- <div class="col-lg-10 col-md-10 col-lg-offset-2 col-md-offset-2 sm-md-12"> -->
       <div class="page-header">
@@ -74,19 +74,19 @@ This is the RideBoard! Post incoming and outcoming rides!
                <span class='panel-message'> <i class="glyphicon glyphicon-envelope"></i> Message : {{post.message}}</span>
 
                <!-- <span class='panel-message'> <i class="glyphicon glyphicon-envelope"></i> Message : {{post.dateOfRide}}</span> -->
-              
+
               <span class="starting-dest">Starting Destination :  {{post.startingDestination}}</span>
               <span class="final-dest">Final Destination : {{post.finalDestination}}</span>
               <span class="time-of-dept">Time of Departure :  {{post.timeOfRide | date: "short"}}</span>
-      
-              
-              
+
+
+
               <button ng-show='userCheck(post)' ng-click="delete(post)"> Delete </button>
               <facebook-like></facebook-like>
           </li>
         </ul>
 
-    
+
      <!--  <div class="panel" ng-repeat="post in posts | orderBy:'-upvotes'">
         <span class="glyphicon glyphicon-thumbs-up"
           ng-click="incrementUpvotes(post)"></span> --> <!-- //click upvote is messed up -->
@@ -107,7 +107,6 @@ This is the RideBoard! Post incoming and outcoming rides!
 
 
     </div>
-  </div> 
+  </div>
   </div>
 </div>
-
